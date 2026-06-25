@@ -36,16 +36,16 @@ Internet
     │  ZONE APPLICATIVE          │
     │  10.10.2.0/24              │
     │  ECO-APP (site web)        │
-    │  PostgreSQL + Patroni      │  ← HA cluster + Redis cache
+    │  ECO-DB (PostgreSQL)       │  ← HA cluster + Redis cache
     └──────────────┬─────────────┘
                    │
-    ┌──────────────▼─────────────┐
-    │  ZONE MANAGEMENT           │
-    │  10.10.3.0/24              │
-    │  Wazuh SIEM (ECO-SEC)      │  ← Agents sur toutes les VMs
-    │  Prometheus + Grafana      │  ← Métriques temps réel
-    │  Elasticsearch / Kibana    │  ← Centralisation des logs
-    └────────────────────────────┘
+    ┌──────────────▼─────────────────┐
+    │  ZONE MANAGEMENT               │
+    │  10.10.3.0/24                  │
+    │  Wazuh SIEM (ECO-SEC)          │  ← Agents sur toutes les VMs
+    │  (ECO-MON) Prometheus + Grafana│  ← Métriques temps réel
+    │  Elasticsearch / Kibana        │  ← Centralisation des logs
+    └────────────────────────────────┘
 
     ┌────────────────────────────┐
     │  ZONE IoT — 10.10.4.0/24   │
