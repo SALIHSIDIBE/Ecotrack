@@ -88,8 +88,8 @@ ECOTRACK/
 │
 ├── scripts/
 │   ├── capteur_simulation.py              # Script 1 : Publisher MQTT (IoT simulator)
-│   ├── mqtt_vers_db.py                    # Script 2 : Subscriber MQTT → PostgreSQL
-│   └── audit_ssh.sh                       # Script 3 : Audit sécurité SSH (ANSSI)
+│   └── mqtt_vers_db.py                    # Script 2 : Subscriber MQTT → PostgreSQL
+│    
 │
 ├── infrastructure/
 │   ├── pfsense/
@@ -127,11 +127,6 @@ S'abonne en continu aux topics Mosquitto et insère chaque mesure reçue dans le
 python3 scripts/mqtt_vers_db.py
 ```
 
-### Script 3 — Audit sécurité SSH (`audit_ssh.sh`)
-Vérifie automatiquement la conformité ANSSI sur toutes les VMs : interdiction root, désactivation mots de passe, statut Fail2ban. Génère un rapport Markdown d'audit.
-
-```bash
-bash scripts/audit_ssh.sh
 ```
 
 ---
