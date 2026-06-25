@@ -21,10 +21,10 @@ Internet
     ▼
 ┌─────────────────────────────────────┐
 │  pfSense (Firewall + IDS/IPS)       │  ← Suricata, Default Deny, NAT/ACL
-│  WAN — vmbr0 / 10.0.0.0/24         │
+│  WAN — vmbr0 / 10.0.0.0/24          │
 └──────────────────┬──────────────────┘
                    │
-    ┌──────────────▼──────────────┐
+    ┌──────────────▼─────────────┐
     │  ZONE DMZ — 10.10.1.0/24   │
     │  HAProxy (VIP 10.10.1.100) │  ← Keepalived HA actif/passif
     │  Nginx + ModSecurity WAF   │  ← OWASP CRS Paranoia Level 2
@@ -32,26 +32,26 @@ Internet
     │  etcd (consensus cluster)  │
     └──────────────┬─────────────┘
                    │
-    ┌──────────────▼──────────────┐
-    │  ZONE APPLICATIVE           │
+    ┌──────────────▼─────────────┐
+    │  ZONE APPLICATIVE          │
     │  10.10.2.0/24              │
     │  ECO-APP (site web)        │
     │  PostgreSQL + Patroni      │  ← HA cluster + Redis cache
     └──────────────┬─────────────┘
                    │
-    ┌──────────────▼──────────────┐
-    │  ZONE MANAGEMENT            │
+    ┌──────────────▼─────────────┐
+    │  ZONE MANAGEMENT           │
     │  10.10.3.0/24              │
     │  Wazuh SIEM (ECO-SEC)      │  ← Agents sur toutes les VMs
     │  Prometheus + Grafana      │  ← Métriques temps réel
     │  Elasticsearch / Kibana    │  ← Centralisation des logs
-    └─────────────────────────────┘
+    └────────────────────────────┘
 
-    ┌──────────────────────────────┐
+    ┌────────────────────────────┐
     │  ZONE IoT — 10.10.4.0/24   │
     │  Broker MQTT Mosquitto     │  ← Auth obligatoire
     │  Scripts de simulation     │
-    └──────────────────────────────┘
+    └────────────────────────────┘
 ```
 
 Accès administration : **OpenVPN uniquement** → certificats PKI nominatifs (x5) → SSH clé Ed25519
@@ -165,7 +165,7 @@ bash scripts/audit_ssh.sh
 Virtualisation  : Proxmox VE sur Debian 12 (Hetzner dedicated server)
 Réseau          : pfSense + ponts virtuels vmbr0 à vmbr5
 IDS/IPS         : Suricata (mode inline IPS, Emerging Threats ruleset)
-WAF             : Nginx + ModSecurity + OWASP CRS (Paranoia Level 2)
+WAF             : Nginx + ModSecurity + OWASP CRS (Paranoia)
 Load Balancer   : HAProxy + Keepalived (VRRP, VIP 10.10.1.100)
 SIEM / HIDS     : Wazuh (agents + manager + Elasticsearch + Kibana)
 Monitoring      : Prometheus + Node Exporter + Grafana
@@ -185,6 +185,6 @@ Abdallah · Boubacar · Wilfried · Terry · **Salih SIDIBE**
 
 ---
 
-## 📄 Licence
+## 📄 Mastère 1
 
 Usage académique — INGETIS / RNCP38823 EASRSI Niveau 7
