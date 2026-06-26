@@ -40,7 +40,7 @@ Serveur physique Hetzner
 | 111 | DB-ECO | CT (lxc) | vmbr3 | 10.10.2.30 | PostgreSQL leader (Patroni) |
 | 105 | ECO-SEC | CT (lxc) | vmbr4 | 10.10.3.10 | Wazuh SIEM |
 | 108 | ECO-MON | CT (lxc) | vmbr4 | 10.10.3.11 | Prometheus + Grafana |
-| 106 | IoT-MQTT | CT (lxc) | vmbr5 | 10.10.4.x | Broker Mosquitto |
+| 106 | IoT-MQTT | CT (lxc) | vmbr5 | 10.10.4.10 | Broker Mosquitto |
 
 ---
 
