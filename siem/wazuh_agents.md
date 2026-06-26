@@ -27,7 +27,7 @@ ECO-SEC (10.10.3.10) — Wazuh Manager
 | ECO-DB-02 | 10.10.2.31 | Logs réplication PostgreSQL |
 | ECO-SEC | 10.10.3.10 | Auto-surveillance Wazuh manager |
 | ECO-MON | 10.10.3.11 | Logs Prometheus, Grafana |
-| IoT-MQTT | 10.10.4.x | Logs Mosquitto, scripts ingestion |
+| IoT-MQTT | 10.10.4.10 | Logs Mosquitto, scripts ingestion |
 
 ---
 
