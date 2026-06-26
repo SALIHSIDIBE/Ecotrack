@@ -175,7 +175,7 @@ Audit           : Fail2ban, FIM Wazuh, logs centralisés, VirusTotal CTI
 ## 👥 Équipe
 
 Projet réalisé en équipe de 5 ingénieurs en cybersécurité — INGETIS Paris (2025-2026)  
-Abdallah · Boubacar · Wilfried · Terry · Sâlih SIDIBE
+Abdallah · Boubacar · Wilfried · Terry · Sâlih
 
 ---
 
